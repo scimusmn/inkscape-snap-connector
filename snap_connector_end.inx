@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Snap Connector (End Type)</_name>
+  <id>org.inkscape.render.snap-connector-end</id>
+
+  <dependency type="executable" location="extensions">foldablebox.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+
+  <param name="thickness"  type="float" min="0" max="1000.0" _gui-text="Material Thickness:">0.125</param>
+  <param name="slot-height"  type="float" min="0" max="1000.0" _gui-text="Slot Height:">0.5</param>
+  <param name="slot-spacing" type="float" min="0" max="1000.0" _gui-text="Slot Spacing:">1.0</param>
+
+  <param name="inner-gutter-depth"  type="float" min="0" max="1000.0" _gui-text="Inner Gutter Depth:">0.25</param>
+  <param name="inner-gutter-width"  type="float" min="0" max="1000.0" _gui-text="Inner Gutter Width:">0.1</param>
+
+  <param name="outer-gutter-depth"  type="float" min="0" max="1000.0" _gui-text="Outer Gutter Depth:">0.25</param>
+  <param name="outer-gutter-width"  type="float" min="0" max="1000.0" _gui-text="Outer Gutter Width:">0.1</param>
+  
+  <param name="finger-width" type="float" min="0" max="1000.0" _gui-text="Finger Width:">0.187</param>
+  <param name="finger-overhang" type="float" min="0" max="1000.0" _gui-text="Finger Overhang Width:">0.197</param>
+  <param name="finger-land"  type="float" min="0" max="1000.0" _gui-text="Finger Land Length:">0.0</param>
+
+  <param name="slip-angle"  type="float" min="0" max="1000.0" _gui-text="Slip Angle (degrees):">10.0</param>
+  <param name="return-angle"  type="float" min="0" max="1000.0" _gui-text="Return Angle (degrees):">50.0</param>
+
+  <param name="unit" _gui-text="Unit:" type="enum">
+    <item value="px">px</item>
+    <item value="pt">pt</item>
+    <item value="in">in</item>
+    <item value="cm">cm</item>
+    <item value="mm">mm</item>
+  </param>
+
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu _name="Render"/>
+    </effects-menu>
+  </effect>
+
+  <script>
+    <command reldir="extensions" interpreter="python">snap_connector_end.py</command>
+  </script>
+  
+</inkscape-extension>  
